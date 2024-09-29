@@ -43,3 +43,5 @@ while read Auteur Titre Editeur Annee ISBN QCouv; do
 done < data/tmp.csv
 cat templates/livres_fin.html >> www/livres.html
 
+echo "Suppression des fichiers temporaires."
+rm -f data/tmp.csv
