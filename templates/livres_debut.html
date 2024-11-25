@@ -1,24 +1,114 @@
 <!DOCTYPE html>
 <html lang="fr">
-
 <head>
-    <meta charset="utf-8">
-    <title>Le site des littératures de genre</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>%TITRE% - Bibliothèque</title>
+    
+    <!-- Material Web CDN -->
+    <script type="module" src="https://cdnjs.cloudflare.com/ajax/libs/material-web/1.2.0/material.min.js"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/material-web/1.2.0/material.min.css">
+    
+    <style>
+        /* Styles de base.html */
+        body {
+            margin: 0;
+            font-family: 'Roboto', sans-serif;
+        }
+        
+        .nav-bar {
+            padding: 1rem;
+            background-color: #6200ee;
+            color: white;
+        }
+        
+        .nav-list {
+            list-style: none;
+            padding: 0;
+            margin: 0;
+            display: flex;
+            gap: 1rem;
+        }
+        
+        .nav-list a {
+            color: white;
+            text-decoration: none;
+        }
+        
+        .content {
+            padding: 2rem;
+            max-width: 800px;
+            margin: 0 auto;
+        }
+        
+        .book-details {
+            display: grid;
+            gap: 1.5rem;
+            margin-top: 2rem;
+        }
+        
+        .book-detail {
+            display: grid;
+            grid-template-columns: 200px 1fr;
+            gap: 1rem;
+            align-items: center;
+            padding: 1rem;
+            background-color: #f5f5f5;
+            border-radius: 4px;
+        }
+        
+        .book-detail strong {
+            color: #6200ee;
+        }
+        
+        .quatrieme {
+            margin-top: 2rem;
+            padding: 2rem;
+            background-color: #f5f5f5;
+            border-radius: 4px;
+        }
+    </style>
 </head>
-
 <body>
-    <nav>
-        <ul>
-            <li><a href="index.html">Accueil</a></li>
-            <li><a href="livres.html">Livres</a></li>
-            <li><a href="auteurs.html">Auteurs</a></li>
-        </ul>
-    </nav>
-    <h1>Livres</h1>
-
-    <table>
-        <tr>
-            <th>Auteur(s)</th>
-            <th>Titre</th>
-            <th>ISBN</th>
-        </tr>
+    <header>
+        <nav class="nav-bar">
+            <ul class="nav-list">
+                <li><md-text-button href="../index.html">Accueil</md-text-button></li>
+                <li><md-text-button href="../livres.html">Livres</md-text-button></li>
+                <li><md-text-button href="../auteurs.html">Auteurs</md-text-button></li>
+            </ul>
+        </nav>
+    </header>
+    
+    <main class="content">
+        <md-headline1>%TITRE%</md-headline1>
+        
+        <div class="book-details">
+            <div class="book-detail">
+                <strong>Auteur(s) :</strong>
+                <span>%AUTEUR%</span>
+            </div>
+            
+            <div class="book-detail">
+                <strong>Maison d'édition :</strong>
+                <span>%EDITEUR%</span>
+            </div>
+            
+            <div class="book-detail">
+                <strong>Année de publication :</strong>
+                <span>%ANNEE%</span>
+            </div>
+            
+            <div class="book-detail">
+                <strong>ISBN :</strong>
+                <span>%ISBN%</span>
+            </div>
+        </div>
+        
+        <div class="quatrieme">
+            <md-headline4>Quatrième de couverture</md-headline4>
+            <p>%QCOUV%</p>
+        </div>
+    </main>
+</body>
+</html>
