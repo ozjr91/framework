@@ -1,3 +1,12 @@
 www/livres
 www/livres.html
 venv
+# Ignorer les fichiers de cache Python
+*.pyc
+__pycache__/
+
+# Ignorer les bases de données SQLite
+*.sqlite3
+
+# Ignorer les dossiers générés
+/migrations/
